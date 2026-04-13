@@ -9,7 +9,7 @@ import base64
 from dotenv import load_dotenv
 
 
-VT_API_KEY = os.getenv("VIRUSTOTAL_API_KEY")
+VT_API_KEY = VT_API_KEY = st.secrets.get("VIRUSTOTAL_API_KEY")git
 
 # -------------------------------
 # Streamlit Page Config

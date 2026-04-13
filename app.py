@@ -29,7 +29,7 @@ st.markdown("---")
 # -------------------------------
 @st.cache_resource
 def load_model():
-    return pipeline("zero-shot-classification", model="valhalla/distilbart-mnli-12-1")
+    return pipeline("zero-shot-classification", model="facebook/bart-large-mnli", device=-1)
 
 classifier = load_model()
 

@@ -8,10 +8,7 @@ import os
 import base64
 from dotenv import load_dotenv
 
-# -------------------------------
-# Load Environment Variables (VirusTotal API)
-# -------------------------------
-load_dotenv()
+
 VT_API_KEY = os.getenv("VIRUSTOTAL_API_KEY")
 
 # -------------------------------
@@ -32,8 +29,7 @@ st.markdown("---")
 # -------------------------------
 @st.cache_resource
 def load_model():
-    return pipeline("zero-shot-classification", model="facebook/bart-large-mnli", device=-1)
-
+pipeline("zero-shot-classification", model="valhalla/distilbart-mnli-12-1")
 classifier = load_model()
 
 # -------------------------------
